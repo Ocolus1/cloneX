@@ -1,0 +1,104 @@
+@font-face {
+  font-family: 'Bradley Hand ITC';
+  src: url(./fonts/Bradley_Hand_ITC.ttf) format('truetype');
+}
+
+body {
+  width: 100vw;
+  background: #ffffff;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 14))
+  }
+}
+
+@keyframes scroller {
+  0% {
+    transform: translateX(calc(-250px * 14));
+  }
+  100% {
+    transform: translateX(0)
+  }
+}
+@keyframes scroll1 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100px * 14))
+  }
+}
+
+@keyframes scroller1 {
+  0% {
+    transform: translateX(calc(-100px * 14));
+  }
+  100% {
+    transform: translateX(0)
+  }
+}
+@keyframes scroll2 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-80px * 14))
+  }
+}
+
+@keyframes scroller2 {
+  0% {
+    transform: translateX(calc(-80px * 14));
+  }
+  100% {
+    transform: translateX(0)
+  }
+}
+
+.slider::before,
+.slider::after{
+  background: linear - gradient(to right, rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%);
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 15%;
+  z-index: 2;
+}
+.slider::before {
+  left: 0;
+  right: 0;
+}
+.slider::after {
+  left: 0;
+  right: 0;
+  transform: rotateZ(180deg)
+}
+.img {
+  width: 100%;
+  transition: transform 1s;
+}
+
+.img:hover {
+  transform: translateZ(20px);
+}
+.slide-track:hover{
+  animation-play-state: paused;
+}
